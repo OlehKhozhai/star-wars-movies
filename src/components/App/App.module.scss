@@ -1,0 +1,38 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1440px;
+
+.root {
+  display: flex;
+  flex-flow: row;
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $tablet) {
+    flex-flow: column;
+    padding: 15px;
+  }
+}
+
+.aside {
+  flex: 2;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @media screen and (max-width: $tablet) {
+    order: 2;
+  }
+}
+
+.main {
+  flex: 5;
+  padding: 40px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @media screen and (max-width: $tablet) {
+    order: 1;
+    padding: 40px 10px;
+  }
+}
